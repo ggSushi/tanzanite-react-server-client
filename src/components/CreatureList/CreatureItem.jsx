@@ -16,10 +16,24 @@ function CreatureItem({creature, creatureName, fetchCreatureList}) {
 
     }
 
+
+    //* Conditional Rendering
+    // text decoration function
+    // This is easier after creating a CreatureItem component
+    const getDecoration = () => {
+        if (creature.name === 'a') {
+            return 'line-through';
+        } else {
+            return 'none'
+        }
+    };
+
+
     return (
         <>
             {/* what we want to render */}
-            <li>
+            {/* The style text-decoration in CSS is turned into camelCase for React */}
+            <li style={{textDecoration: getDecoration() }}>
                 {creatureName} is from {creature.origin}
                 <button onClick={(e) => removeCreature(e)}>Delete</button>
             </li>
