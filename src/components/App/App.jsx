@@ -10,32 +10,6 @@ import InputExample from '../InputExample/InputExample.jsx';
 
 // App is a component
 function App () {
-  // Our functions and variables will go here
-  //This is how we previously declared variables
-  // let firstName = 'Glonel';
-  // let counter = 0;
-
-  {/*
-  //* New way of declaring variables in React
-  //      name     function          default
-  const [counter, setCounter] = useState(0);
-  const [firstName, setFirstName] = useState('Glonel');
-
-  //Function to increase click counter
-  let increaseClickCounter = () => {
-    // counter += 1; //! Do not modify state directly!
-    setCounter(counter + 1);
-    //! Counter has not changed just yet at this point
-    console.log('in counter')
-  }
-
-  let decreaseClickCounter = () => {
-    setCounter(counter - 1);
-    console.log('in counter');
-  }
-  */}
-
-
   const [headerText, setHeaderText] = useState('Welcome to React!');
 
 
