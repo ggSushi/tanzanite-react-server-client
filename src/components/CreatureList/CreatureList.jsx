@@ -1,10 +1,13 @@
 import { useState, useEffect } from 'react';
 // We must import axios in each component that we want to use it
 import axios from 'axios';
+import CreatureForm from './CreatureForm.jsx';
 
 
 
 function CreatureList() {
+    const [creatureName, setCreatureName] = useState('');
+    const [creatureOrigin, setCreatureOrigin] = useState('');
     const [listOfCreatures, setListOfCreatures] = useState([]);
 
     const fetchCreatureList = () => {
@@ -28,6 +31,13 @@ function CreatureList() {
     // All component return what you want to display on DOM
     return (
         <div>
+            <CreatureForm 
+                creatureName={creatureName}
+                setCreatureName={setCreatureName}
+                creatureOrigin={creatureOrigin}
+                setCreatureOrigin={setCreatureOrigin}
+                fetchCreatureList={fetchCreatureList} 
+            />
             <h2>Creature List</h2>
             {
                 // This turns our array into a string
@@ -35,6 +45,7 @@ function CreatureList() {
                 // You can delete or comment this out after .map
                 // JSON.stringify(listOfCreatures)
             }
+
             <ul>
                 {
                     listOfCreatures.map((creature) => (

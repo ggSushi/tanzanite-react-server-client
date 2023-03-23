@@ -19,6 +19,7 @@ function ClickCounter() {
         <div>
             <p>You clicked this {counter} times!</p>
             <button onClick={increaseCount} >Raise the roof!</button>
+            <br></br>
             <button onClick={decreaseCount} >Drop it like it's hot!</button>
         </div>
     )

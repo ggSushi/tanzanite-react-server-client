@@ -6,6 +6,7 @@ import { useState } from 'react';
 import Header from '../Header/Header.jsx';
 import CreatureList from '../CreatureList/CreatureList.jsx';
 import Counter from '../Counter/Counter.jsx';
+import InputExample from '../InputExample/InputExample.jsx';
 
 // App is a component
 function App () {
@@ -34,30 +35,27 @@ function App () {
   }
   */}
 
+
+  const [headerText, setHeaderText] = useState('Welcome to React!');
+
+
   return (
     // This looks like HTML but is really JSX
     <div>
-
-      {/* 
-      <header>
-        <h1>Welcome to React!</h1>
-      </header>
-      <p>Hello World! {firstName}</p>
-      <p>You clicked {counter} times!</p>
-      <button onClick={increaseClickCounter}> Raise the roof! </button>
-      {/* This is the new code commenting inside of React code 
-        TODO: Add a decrease button*/}
-      {/*
-      <br></br>
-      <button onClick={decreaseClickCounter}> Drop it like it's hot! </button> 
-      
-      */}
-
-
-
-{/* Render CreatureList on the DOM */}
-      <Header />
+    {/* Render components on the DOM */}
+    {/* headerTextProp is the name of our prop */}
+    {/* {headerText} is the value we are assigning to the prop */}
+      <Header 
+      headerTextProp={headerText} 
+      textColor="salmon"
+      />
+      <Header 
+      headerTextProp={'New Header wuuuuttttt'} 
+      textColor="orange"
+      />
+      {/* <p>Glonel</p>
       <Counter />
+    <InputExample /> */}
       <CreatureList />
 
     </div>
